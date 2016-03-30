@@ -961,7 +961,7 @@ $$
 Если $V$, $W$ — линейные пространства, то изоморфизм — это такая биекция $f: V \rightarrow W$:
 
 $$
-f(\alpha \mathbf{u} + \beta \mathbf{v}) = \alpha f(\mathbf{u} + \beta f(\mathbf{v}).
+f(\alpha \mathbf{u} + \beta \mathbf{v}) = \alpha f(\mathbf{u}) + \beta f(\mathbf{v}).
 $$
 
 #### 10. Дайте определения суммы и прямой суммы подпространств.
