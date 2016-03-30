@@ -399,3 +399,81 @@ $$
 x - x^0 = c_1 \phi^{(1)} + \dots + c_k \phi^{(k)}. \blacksquare
 $$
 
+#### 14. Выписать формулу для вычисления векторного произведения в координатах, заданных в ортонормированном базисе, и доказать ее.
+
+$$
+[a,b] = \begin{vmatrix}
+\textbf{i} & \textbf{j} & \textbf{k} \\
+a_x & a_y & a_z \\
+b_x & b_y & b_z
+\end{vmatrix}.
+$$
+
+$\square$ Докажем, что такое векторное произведение подходит под определение.
+
+$1)$ Скалярное произведение $([a, b], a)$ равно нулю, т.к. определитель матрицы, у которой два столбца линейно зависимы, равен нулю:
+
+$$
+([a, b], a) = a_x \begin{vmatrix}
+a_y & a_z \\
+b_y & b_z
+\end{vmatrix} - a_y \begin{vmatrix}
+a_x & a_z \\
+b_x & b_z
+\end{vmatrix} + a_z \begin{vmatrix}
+a_x & a_y \\
+b_x & b_y
+\end{vmatrix} = \begin{vmatrix}
+a_x & a_y & a_z \\
+a_x & a_y & a_z \\
+b_x & b_y & b_z
+\end{vmatrix}.
+$$
+
+Аналогично $([a, b], b) = 0$.
+
+Следовательно, предложенное произведение ортогонально каждому из векторов $a, b$.
+
+$2)$ Докажем, что $|[a,b]| = |a| |b| \sin \phi$.
+
+$$
+\cos\phi = \frac{(a,b)}{|a| |b|} \\
+\sin^2 \phi = 1 - \cos^2\phi = \frac{|a|^2 |b|^2 - (a, b)^2}{|a|^2 |b|^2} \\
+\sin \phi = \frac{\sqrt{|a|^2 + |b|^2 - (a, b)^2}}{|a| |b|},
+$$
+
+откуда
+
+$$
+|a| |b| \sin \phi = \sqrt{|a|^2 + |b|^2 - (a, b)^2} = \\
+a_y^2 b_x^2 - 2 a_x a_y b_x b_y + a_x^2 b_y^2 + a_z^2 b_x^2 - 2 a_x a_z b_x b_z + a_x^2 b_z^2 + \\
++ a_z^2 b_y^2 - 2 a_y a_y b_y b_z + a_y^2 b_z^2.
+$$
+
+А модуль $[a,b]$
+
+$$
+|[a,b]| = |(\begin{vmatrix}
+a_y & a_z \\
+b_y & b_z
+\end{vmatrix}, \begin{vmatrix}
+a_x & a_z \\
+b_x & b_z
+\end{vmatrix}, \begin{vmatrix}
+a_x & a_y \\
+b_x & b_y
+\end{vmatrix})| = \\
+= |(a_y b_z - a_z b_y, a_z b_x - a_x b_z, a_x b_y - a_y b_x)|
+$$
+
+равен тому же самому. Вот так вот!
+
+$3)$ По тому же самому свойству определителя
+
+$$
+[a, a] = \begin{vmatrix}
+\textbf{i} & \textbf{j} & \textbf{k} \\
+a_x & a_y & a_z \\
+a_x & a_y & a_z \\
+\end{vmatrix} = 0. \blacksquare
+$$

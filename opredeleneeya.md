@@ -269,11 +269,13 @@ $$
 
 $$
 [a, b] = \begin{vmatrix}
-e_x & e_y & e_z \\
+\textbf{i} & \textbf{j} & \textbf{k} \\
 a_x & a_y & a_z \\
 b_x & b_y & b_z 
-\end{vmatrix}.
+\end{vmatrix},
 $$
+
+где $\textbf{i}, \textbf{j}, \textbf{k}$ — соответствующие базисные вектора.
 
 #### 4. Сформулировать критерий коллинеарности двух векторов с помощью векторного произведения.
 
