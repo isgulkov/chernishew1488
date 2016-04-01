@@ -717,3 +717,61 @@ $$
 \phi (h_1 h_2) = g_1 g_2 \text{Ker} f = (g_1 \text{Ker} f) (g_2 \text{Ker} f) = \phi(h_1) \phi(h_2). \blacksquare
 $$
 
+#### 24. Выведите формулу для описания изменения координат вектора при изменении базиса.
+
+$$
+x^{e'} = T^{-1}_{e \rightarrow e'} x^e.
+$$
+
+$\square$ Допустим, $e = (e_1, \dots, e_n)$ — старый базис, $e' = (e'_1, \dots, e'_n)$ и
+
+$$
+e'_1 = a_{11} e_1 + \dots + a_{n1} e_n \\
+\vdots \\
+e'_n = a_{1n} e_1 + \dots + a_{nn} e_n.
+$$
+
+Тогда вектор $x$, имеющий в базисе $e$ координаты $x^e = (x_1, \dots, x_n)^T$, будет иметь в базисе $e'$ координаты $x^{e'} = (x'_1, \dots, x'_n)^T$:
+
+$$
+x = x'_1 e'_1 + \dots + x'_n e'_n = x'_1 (a_{11} e_1 + \dots + a_{n1} e_n) + \\ + \dots + x'_n (a_{1n} e_1 + \dots + a_{nn} e_n) = \\
+= (x'_1 a_{11} + x'_2 a_{12} + \dots + x'_n a_{1n}) e_1 + \dots = \\
+= x_1 e_1 + \dots + x_n e_n.
+$$
+
+Тогда
+
+$$
+x_1 = x'_1 a_{11} + x'_2 a_{12} + \dots + x'_n a_{1n} \\
+\vdots
+$$
+
+и
+
+$$
+\begin{pmatrix}
+x_1 \\
+\vdots \\
+x_n
+\end{pmatrix} = T_{e \rightarrow e'} \begin{pmatrix}
+x'_1 \\
+\vdots \\
+x'_n
+\end{pmatrix},
+$$
+
+откуда
+
+$$
+\begin{pmatrix}
+x'_1 \\
+\vdots \\
+x'_n
+\end{pmatrix} = T^{-1}_{e \rightarrow e'}
+\begin{pmatrix}
+x_1 \\
+\vdots \\
+x_n
+\end{pmatrix}. \blacksquare
+$$
+
