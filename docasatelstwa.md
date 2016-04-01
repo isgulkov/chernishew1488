@@ -693,3 +693,95 @@ $$
 
 $\square$ Все смежные классы $gH$ имеют одинаковое число элементов, равное $|H|$. Поскольку они разбивают группу $G$ на классы эквивалентности, то имеем что имеем. $\blacksquare$
 
+#### 23. Сформулировать и доказать теорему о гомоморфизме групп.
+
+Пусть $f: G \rightarrow H$ — гомоморфизм групп. Тогда
+
+$$
+\text{Im} f \simeq G/\text{Ker}f.
+$$
+
+$\square$ $f(g_1) = f(g_2) \Leftrightarrow g_1 \equiv g_2 (\text{mod} \;\text{Ker} f)$. В частности, $f$ инъективно тогда и только тогда, когда $\text{Ker} f = \{e\}$. Действительно,
+
+$$
+f(g_1) = f(g_2) \Leftrightarrow f(g_1^{-1} g_2) = e \Leftrightarrow g_1^{-1} g_2 \in \text{Ker} f \Leftrightarrow g_1 \equiv g_2 (\text{mod} \; \text{Ker} f).
+$$
+
+Таким образом, гомоморфизм $f: G \rightarrow H$ является изоморфизмом тогда и только тогда, когда $\text{Im} f = H$ и $\text{Ker} f = \{e\}$.
+
+Следовательно, все элементы смежного класса $g \text{Ker} f$, и только они, переходят в элементы $h = f(g) \in \text{Im} f$. Тем самым показано, что отображение $\phi$, о котором идет речь в теореме, определено и является биекцией. Осталось проверить, что $\phi$ — гомоморфизм.
+
+Пусть $g_1, g_2 \in G, f(g_1) =  h_1, f(g_2) = h_2$. Тогда $f(g_1 g_2) = h_1 h_2$ и
+
+$$
+\phi (h_1 h_2) = g_1 g_2 \text{Ker} f = (g_1 \text{Ker} f) (g_2 \text{Ker} f) = \phi(h_1) \phi(h_2). \blacksquare
+$$
+
+#### 24. Выведите формулу для описания изменения координат вектора при изменении базиса.
+
+$$
+x^{e'} = T^{-1}_{e \rightarrow e'} x^e.
+$$
+
+$\square$ Допустим, $e = (e_1, \dots, e_n)$ — старый базис, $e' = (e'_1, \dots, e'_n)$ и
+
+$$
+e'_1 = a_{11} e_1 + \dots + a_{n1} e_n \\
+\vdots \\
+e'_n = a_{1n} e_1 + \dots + a_{nn} e_n.
+$$
+
+Тогда вектор $x$, имеющий в базисе $e$ координаты $x^e = (x_1, \dots, x_n)^T$, будет иметь в базисе $e'$ координаты $x^{e'} = (x'_1, \dots, x'_n)^T$:
+
+$$
+x = x'_1 e'_1 + \dots + x'_n e'_n = x'_1 (a_{11} e_1 + \dots + a_{n1} e_n) + \\ + \dots + x'_n (a_{1n} e_1 + \dots + a_{nn} e_n) = \\
+= (x'_1 a_{11} + x'_2 a_{12} + \dots + x'_n a_{1n}) e_1 + \dots = \\
+= x_1 e_1 + \dots + x_n e_n.
+$$
+
+Тогда
+
+$$
+x_1 = x'_1 a_{11} + x'_2 a_{12} + \dots + x'_n a_{1n} \\
+\vdots
+$$
+
+и
+
+$$
+\begin{pmatrix}
+x_1 \\
+\vdots \\
+x_n
+\end{pmatrix} = T_{e \rightarrow e'} \begin{pmatrix}
+x'_1 \\
+\vdots \\
+x'_n
+\end{pmatrix},
+$$
+
+где $T_{e \rightarrow e'}$ — матрица перехода от базиса $e$ к $e'$:
+
+$$
+T_{e \rightarrow e'} = \begin{pmatrix}
+a_{11} & \dots & a_{1n} \\
+\vdots & \ddots & \vdots \\
+a_{n1} & \dots & a_{nn} \\
+\end{pmatrix}.
+$$
+
+откуда
+
+$$
+\begin{pmatrix}
+x'_1 \\
+\vdots \\
+x'_n
+\end{pmatrix} = T^{-1}_{e \rightarrow e'}
+\begin{pmatrix}
+x_1 \\
+\vdots \\
+x_n
+\end{pmatrix}. \blacksquare
+$$
+
