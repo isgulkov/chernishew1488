@@ -1284,7 +1284,7 @@ $$
 Ортогональный оператор $A$:
 
 $$
-(A \mathbf{x}, A \mathbf{y}) = (\mathbf{x}, \mathbf{x}).
+(A \mathbf{x}, A \mathbf{y}) = (\mathbf{x}, \mathbf{y}).
 $$
 
 #### 4. Как найти матрицу сопряженного оператора?
