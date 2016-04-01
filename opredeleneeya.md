@@ -1223,18 +1223,16 @@ $$
 
 #### 11. Выпишите формулу для ортогональной проекции вектора на подпространство, заданное в виде линейной оболочки конечного набора векторов.
 
-Если $U = \langle x_1, \dots, x_n \rangle$ и $x_1, \dots, x_n$ — линейно независимы, то
+Если $U = \langle e_1, \dots, e_n \rangle$ и $e_1, \dots, e_n$ — линейно независимы, то
 
 $$
 x_U = - \frac{1}{|\Gamma|} \begin{pmatrix}
-\ddots & & \kern3mu\raise1mu{.}\kern3mu\raise6mu{.}\kern3mu\raise12mu{.} & x_1 \\
- & \Gamma & & \vdots \\
- \kern3mu\raise1mu{.}\kern3mu\raise6mu{.}\kern3mu\raise12mu{.} & & \ddots & x_n \\
-(x, x_1) & \dots & (x, x_n) & 0
-\end{pmatrix},
+(e_1, e_1) & \dots & (e_1, e_n) & (e_1, x) \\
+\vdots & \ddots & \vdots & \vdots \\
+(e_n, e_1) & \dots & (e_n, e_n) & (e_n, x) \\
+e_1 & \dots & e_n & 0
+\end{pmatrix}.
 $$
-
-где $\Gamma$ — матрица грама системы векторов $x_1, \dots, x_n$.
 
 #### 12. Выпишите формулу для вычисления расстояния с помощью определителей матриц Грама.
 
