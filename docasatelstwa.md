@@ -760,6 +760,16 @@ x'_n
 \end{pmatrix},
 $$
 
+где $T_{e \rightarrow e'}$ — матрица перехода от базиса $e$ к $e'$:
+
+$$
+T_{e \rightarrow e'} = \begin{pmatrix}
+a_{11} & \dots & a_{1n} \\
+\vdots & \ddots & \vdots \\
+a_{n1} & \dots & a_{nn} \\
+\end{pmatrix}.
+$$
+
 откуда
 
 $$
